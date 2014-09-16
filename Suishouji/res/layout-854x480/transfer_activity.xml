@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView android:orientation="vertical" style="@style/common_bg"
+	android:scrollbars="none" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<TextView android:id="@+id/title_tv" android:text="转账"
+			style="@style/common_title" />
+		<LinearLayout android:orientation="vertical"   android:paddingLeft="8dp" android:paddingRight="8dp"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_marginTop="10.0dip">
+			<FrameLayout android:orientation="horizontal" android:background="@drawable/account_edit_top"
+				android:id="@+id/transfer_out_ly" android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+				<TextView android:text="转出:" style="@style/transfer_label" android:textColor="@color/white"/>
+				<Spinner android:id="@+id/transfer_out_account_spn" style="@style/form_row_input_top" />
+				<ImageView style="@style/transfer_info_img" />
+			</FrameLayout>
+			<FrameLayout android:orientation="horizontal" android:background="@drawable/account_edit_middle"
+				android:id="@+id/transfer_in_ly" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" >
+				<TextView android:text="转入:" style="@style/transfer_label" android:textColor="@color/white"/>
+				<Spinner android:textColor="@color/white" android:id="@+id/transfer_in_account_spn"
+					style="@style/form_row_input_top" />
+				<ImageView style="@style/transfer_info_img" />
+			</FrameLayout>
+			<LinearLayout android:orientation="horizontal" android:background="@drawable/account_edit_middle"
+				android:id="@+id/transfer_amount_ly" android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:text="金额:" style="@style/transfer_label" android:textColor="@color/white"/>		
+				<EditText android:textSize="25.0dip"
+						android:textColorHint="@color/grey" android:gravity="right|center"
+						android:id="@+id/transfer_amount_out_et" android:paddingLeft="10.0dip"
+						android:paddingRight="40.0dip" android:layout_width="fill_parent"
+						android:layout_height="fill_parent" android:hint="输入转账金额"
+						android:cursorVisible="false" android:maxLength="15"
+						android:numeric="signed|decimal" style="@style/transfer_amount_out_et" />
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical"
+				android:id="@+id/transfer_info_ly"  android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:paddingLeft="0.0dip" android:text="其他信息" android:visibility="gone"
+					style="@style/transfer_label" android:textColor="@color/white"/>
+				<FrameLayout android:layout_width="fill_parent" 
+					android:layout_height="wrap_content" android:background="@drawable/account_edit_middle">
+					<Button android:textColor="@color/white" android:gravity="right|center"
+						android:id="@+id/transfer_info_tradetime_btn" style="@style/form_row_input_top"
+						android:paddingRight="40.0dip" android:layout_width="fill_parent"
+						android:layout_height="46.0dip" />
+					<TextView android:layout_marginLeft="12.0dip"
+						android:text="时间" style="@style/transfer_label_content" android:textColor="@color/white"/>
+					<ImageView style="@style/transfer_info_img" />
+				</FrameLayout>
+				<FrameLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:background="@drawable/account_edit_middle">
+					<Spinner android:id="@+id/transfer_info_project_spn" style="@style/form_row_input_top"
+					     android:paddingRight="10.0dip"
+						android:layout_width="fill_parent" android:layout_height="46.0dip" />
+					<TextView android:layout_marginLeft="12.0dip"
+				 		android:text="项目" style="@style/transfer_label_content" android:textColor="@color/white"/>
+					<ImageView style="@style/transfer_info_img" />
+				</FrameLayout>
+				<FrameLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:background="@drawable/account_edit_bottom">
+					<Button android:textColor="@color/white" android:ellipsize="end"
+						android:gravity="right|center" android:id="@+id/transfer_info_memo_btn"
+						style="@style/form_row_input_top"
+						android:paddingLeft="90.0dip" android:paddingRight="35.0dip"
+						android:layout_width="fill_parent" android:layout_height="46.0dip"
+						android:singleLine="true" />
+					<TextView android:layout_marginLeft="12.0dip"
+						android:text="备注" style="@style/transfer_label_content" android:textColor="@color/white"/>
+					<ImageView style="@style/transfer_info_img" />
+				</FrameLayout>
+				<Button android:id="@+id/transfer_btn" android:layout_marginLeft="30dp" android:layout_marginRight="30dp" android:textSize="25dp"  android:text="确定"  android:gravity="center"  style="@style/transfer_btn" android:textColor = "@color/white"/>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

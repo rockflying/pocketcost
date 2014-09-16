@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" style="@style/common_bg">
+    <TextView android:id="@+id/title_tv" android:text="添加银行卡信息"
+		style="@style/common_title" />
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_marginTop="15.0dip" android:paddingLeft="8dp" android:paddingRight="8dp"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+    
+    <FrameLayout android:layout_width="fill_parent" style="@style/common_row_layout_top"
+	android:layout_height="wrap_content">
+	<Button android:id="@+id/card_num_btn" android:paddingLeft="90.0dip"
+		android:paddingRight="45.0dip" android:singleLine="true"
+		style="@style/form_row_input_middle" />
+	<TextView android:text="卡号" style="@style/form_row_label" android:textColor="@color/white" />
+	<ImageView style="@style/form_row_go_detail" />
+   </FrameLayout>
+     
+    <FrameLayout android:layout_width="fill_parent" 
+	android:layout_height="wrap_content" style="@style/common_row_layout_middle">
+	<Spinner android:id="@+id/bank_name_btn" android:paddingLeft="90.0dip"
+		android:paddingRight="45.0dip" android:singleLine="true"
+		style="@style/form_row_input_middle" />
+	<TextView android:text="银行" style="@style/form_row_label" android:textColor="@color/white" />
+	<ImageView style="@style/form_row_go_detail" />
+   </FrameLayout>
+   
+    <FrameLayout android:layout_width="fill_parent"
+	android:layout_height="wrap_content" style="@style/common_row_layout_middle">
+	<Spinner android:id="@+id/card_catery_btn" android:paddingLeft="90.0dip"
+		android:paddingRight="45.0dip" android:singleLine="true"
+		style="@style/form_row_input_middle" />
+	<TextView android:text="类别" style="@style/form_row_label" android:textColor="@color/white" />
+	<ImageView style="@style/form_row_go_detail" />
+   </FrameLayout>
+    
+    <FrameLayout android:layout_width="fill_parent"
+	android:layout_height="wrap_content" style="@style/common_row_layout_middle">
+	<Button android:id="@+id/record_date_btn" android:paddingLeft="90.0dip"
+		android:paddingRight="45.0dip" android:singleLine="true"
+		style="@style/form_row_input_middle" />
+	<TextView android:text="账单日" style="@style/form_row_label" android:textColor="@color/white" />
+	<ImageView style="@style/form_row_go_detail" />
+   </FrameLayout>
+    
+    <FrameLayout android:layout_width="fill_parent"
+	 android:layout_height="wrap_content" style="@style/common_row_layout_middle">
+	 <Spinner android:id="@+id/account_date_catgeroy_spn" android:prompt="@string/spn_prompt_account"
+		style="@style/form_row_input_middle" android:textColorHint="@color/white"/>
+	 <TextView android:text="还款类型" style="@style/form_row_label" android:textColor="@color/white" />
+	 <ImageView style="@style/form_row_go_detail" />
+   </FrameLayout>
+    
+    <FrameLayout android:layout_width="fill_parent"
+	android:layout_height="wrap_content" style="@style/common_row_layout_middle">
+	<Button android:id="@+id/back_date_btn" android:paddingLeft="90.0dip"
+		android:paddingRight="45.0dip" android:singleLine="true"
+		style="@style/form_row_input_middle" />
+	<TextView android:text="还款日" style="@style/form_row_label" android:textColor="@color/white" />
+	<ImageView style="@style/form_row_go_detail" />
+   </FrameLayout>
+   
+    <FrameLayout android:layout_width="fill_parent"
+	android:layout_height="wrap_content" style="@style/common_row_layout_middle">
+	<Button android:id="@+id/count_btn" android:paddingLeft="90.0dip"
+		android:paddingRight="45.0dip" android:singleLine="true"
+		style="@style/form_row_input_middle" />
+	<TextView android:text="额度" style="@style/form_row_label" android:textColor="@color/white" />
+	<ImageView style="@style/form_row_go_detail" />
+   </FrameLayout>
+    
+    <FrameLayout android:layout_width="fill_parent"
+	android:layout_height="wrap_content" style="@style/common_row_layout_bom">
+	<Button android:id="@+id/other_record_btn" android:paddingLeft="90.0dip"
+		android:paddingRight="45.0dip" android:singleLine="true"
+		style="@style/form_row_input_middle" />
+	<TextView android:text="备注" style="@style/form_row_label" android:textColor="@color/white" />
+	<ImageView style="@style/form_row_go_detail" />
+   </FrameLayout>
+   <Button android:id="@+id/save_btn" android:layout_marginTop="20dp"
+       android:gravity="center" android:textSize="25dp" android:singleLine="true"
+       android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+		android:text="保存"  android:textColor="@color/black"
+		style="@style/transfer_btn"  />
+
+   </LinearLayout>
+   </ScrollView>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:minHeight="80dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:orientation="vertical" >
+    
+    <!-- 列表布局 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:id="@+id/list">
+        
+        <TextView
+            android:id="@+id/bank_name"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="名字" />
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp" 
+            android:layout_toRightOf="@id/bank_name"
+            />
+         <TextView
+            android:id="@+id/card_num"
+            android:layout_width="240dp"
+            android:paddingLeft="10dp"
+            android:layout_height="35dp"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:layout_toRightOf="@id/line"
+            android:text="haha" />
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="220dp"
+            android:paddingLeft="10dp"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:layout_alignLeft="@id/card_num"
+            android:layout_below="@id/card_num"
+            android:text="123456"  />
+    </RelativeLayout>
+</LinearLayout>
