@@ -1,18 +1,10 @@
-
 package com.hzm.lczs;
-
-import java.text.DecimalFormat;
-
-import com.hzm.lczs.R;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.Toast;
-
 
 public class KeyPad extends Activity implements OnClickListener {
 	private Button btnDisplay = null;
@@ -48,7 +40,7 @@ public class KeyPad extends Activity implements OnClickListener {
 	private Button btnDone = null;
 
 	private String value = "0";
-	
+
 	private boolean isValueEmpty = false;
 
 	@Override
@@ -87,13 +79,11 @@ public class KeyPad extends Activity implements OnClickListener {
 		btnCancel.setOnClickListener(this);
 		btnClean.setOnClickListener(this);
 		btnDone.setOnClickListener(this);
-		if(this.getIntent().hasExtra("value"))
-		{
-			value=this.getIntent().getStringExtra("value");
+		if (this.getIntent().hasExtra("value")) {
+			value = this.getIntent().getStringExtra("value");
 		}
-		if(value==null || value.equals(""))
-		{
-			value="0";
+		if (value == null || value.equals("")) {
+			value = "0";
 			isValueEmpty = true;
 		}
 		btnDisplay.setText(value);
@@ -136,7 +126,7 @@ public class KeyPad extends Activity implements OnClickListener {
 			break;
 		default:
 			int i = 0;
-			if(!isValueEmpty){
+			if (!isValueEmpty) {
 				value = "0";
 				isValueEmpty = true;
 			}
@@ -150,25 +140,24 @@ public class KeyPad extends Activity implements OnClickListener {
 					value = "";
 				}
 			}
-			if(value.indexOf(".")>-1 || i==1){
+			if (value.indexOf(".") > -1 || i == 1) {
 				if (value.length() < 9) {
 					value = value + ((Button) v).getText();
 				}
-			}else{
+			} else {
 				if (value.length() < 6) {
 					value = value + ((Button) v).getText();
 				}
 			}
-			
+
 			break;
 		}
-//		DecimalFormat df2 = new DecimalFormat("#####,##0.##"); 
-		if(value.indexOf(".")>-1 && value.indexOf(".")<value.length()-3)
-		{
-			value=value.substring(0,value.indexOf(".")+3);
+		// DecimalFormat df2 = new DecimalFormat("#####,##0.##");
+		if (value.indexOf(".") > -1 && value.indexOf(".") < value.length() - 3) {
+			value = value.substring(0, value.indexOf(".") + 3);
 		}
-		//value=df2.format(Double.parseDouble(value));
-		btnDisplay.setText(value);//₩
+		// value=df2.format(Double.parseDouble(value));
+		btnDisplay.setText(value);// ₩
 
 	}
 }

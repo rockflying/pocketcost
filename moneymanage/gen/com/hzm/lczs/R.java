@@ -584,7 +584,7 @@ public final class R {
         public static final int next_btn=0x7f0b0064;
         public static final int nine=0x7f0b0090;
         public static final int one=0x7f0b0088;
-        public static final int other_record_btn=0x7f0b0008;
+        public static final int other_record_btn=0x7f0b0009;
         public static final int payout_amount_tv=0x7f0b0065;
         public static final int payout_tab_rb=0x7f0b000c;
         public static final int photo_menu=0x7f0b009b;
@@ -598,7 +598,7 @@ public final class R {
         public static final int report_setting_change_group_type_menu=0x7f0b00aa;
         public static final int report_setting_change_time_peroid_menu=0x7f0b00a9;
         public static final int report_stat_type_menu=0x7f0b00a8;
-        public static final int save_btn=0x7f0b0009;
+        public static final int save_btn=0x7f0b0008;
         public static final int save_menu=0x7f0b0098;
         public static final int second_level_account_group_name_tv=0x7f0b0077;
         public static final int second_level_accountgroup_detail_iv=0x7f0b0075;

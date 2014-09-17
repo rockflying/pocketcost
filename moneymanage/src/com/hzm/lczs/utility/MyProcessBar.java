@@ -22,43 +22,43 @@ public class MyProcessBar extends RelativeLayout {
 	private LayoutParams params;
 	private Handler mHandler;
 	private boolean isModified = false;
-	
-	int i=0;
+
+	int i = 0;
 	private Thread mThread = new Thread(new Runnable() {
 		@Override
 		public void run() {
-				try {
-//					
-				    if(m_process==0){
-				        
-				        if (mImageView != null)
-                            removeView(mImageView);
-				    }
-				    
-					if(c_process<m_process){
-					    
-					    mThread.sleep(20);
-					    c_process++;
-					    setProgressVaule(c_process);
-					    reflashPorcess(c_process);
-					  
-					    // 界面的修改，交由线程来处理
-					    
-					    Log.e("hzm xia","c_process:"+c_process);
-	                    Log.e("hzm xia","m_process:"+m_process);
-					}else {
-					    
-					    c_process=0;
-					    
-					}
-				
-					//setProgress(c_process);
-					
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-					Log.e("hzm xia","xuo:");
+			try {
+				//
+				if (m_process == 0) {
+
+					if (mImageView != null)
+						removeView(mImageView);
 				}
+
+				if (c_process < m_process) {
+
+					mThread.sleep(20);
+					c_process++;
+					setProgressVaule(c_process);
+					reflashPorcess(c_process);
+
+					// 界面的修改，交由线程来处理
+
+					Log.e("hzm xia", "c_process:" + c_process);
+					Log.e("hzm xia", "m_process:" + m_process);
+				} else {
+
+					c_process = 0;
+
+				}
+
+				// setProgress(c_process);
+
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				Log.e("hzm xia", "xuo:");
+			}
 		}
 	});
 
@@ -73,12 +73,12 @@ public class MyProcessBar extends RelativeLayout {
 	}
 
 	private void init() {
-//		setBackgroundResource(R.drawable.widget_battery_bg);
+		// setBackgroundResource(R.drawable.widget_battery_bg);
 		mHandler = new Handler(getContext().getMainLooper());
 		params = new LayoutParams(LayoutParams.FILL_PARENT,
 				LayoutParams.FILL_PARENT);
 		params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-//		mThread.start();
+		// mThread.start();
 	}
 
 	public void setMax(int max) {
@@ -97,13 +97,12 @@ public class MyProcessBar extends RelativeLayout {
 	}
 
 	public void setProgressVaule(int process) {
-        if (process <= m_max) {
-           
-            mHandler.post(mThread);
-        }
-    }
-	
-	
+		if (process <= m_max) {
+
+			mHandler.post(mThread);
+		}
+	}
+
 	public int getProgress() {
 		return m_process;
 	}
@@ -122,6 +121,6 @@ public class MyProcessBar extends RelativeLayout {
 		mImageView.setImageResource(R.drawable.widget_battery_bg1);
 		params.height = getCountLength();
 		addView(mImageView, params);
-		
+
 	}
 }
