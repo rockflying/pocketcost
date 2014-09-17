@@ -2,6 +2,7 @@ package com.hzm.lczs;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import org.achartengine.ChartFactory;
 import org.achartengine.GraphicalView;
@@ -9,14 +10,12 @@ import org.achartengine.model.CategorySeries;
 import org.achartengine.renderer.DefaultRenderer;
 import org.achartengine.renderer.SimpleSeriesRenderer;
 
-import com.hzm.lczs.db.MyDbHelper;
-
 import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.util.Log;
+
+import com.hzm.lczs.db.MyDbHelper;
 
 public class DrawPie {  
     //画饼图
@@ -162,7 +161,7 @@ public class DrawPie {
      private String format(Date date){
          String str = "";
          SimpleDateFormat ymd = null;
-         ymd = new SimpleDateFormat("yyyy-MM-dd");
+         ymd = new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA);
          str = ymd.format(date); 
          return str;
      }
