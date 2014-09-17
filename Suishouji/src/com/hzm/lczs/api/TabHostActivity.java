@@ -1,19 +1,18 @@
 package com.hzm.lczs.api;
 
-import com.hzm.lczs.R;
-
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
+import android.widget.TabHost.TabSpec;
 import android.widget.TabWidget;
 import android.widget.TextView;
-import android.widget.TabHost.TabSpec;
+
+import com.hzm.lczs.R;
 
 
 public abstract class TabHostActivity extends TabActivity {
